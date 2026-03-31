@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "outline-variant": "#bcb9b3",
+              "on-error": "#ffffff",
+              "surface-container-highest": "#ebe8e2",
+              "surface": "#fffbff",
+              "on-background": "#393834",
+              "primary-dim": "#535251",
+              "surface-tint": "#5f5e5d",
+              "surface-bright": "#fffbff",
+              "inverse-surface": "#0e0e0d",
+              "on-secondary": "#ffffff",
+              "surface-container-low": "#fdf9f5",
+              "error-dim": "#5c1202",
+              "secondary": "#6f634c",
+              "primary": "#5f5e5d",
+              "on-primary-fixed-variant": "#5c5b5a",
+              "primary-container": "#e4e2e0",
+              "on-tertiary-container": "#615b4e",
+              "on-primary-container": "#525250",
+              "on-primary-fixed": "#3f3f3e",
+              "tertiary-dim": "#5d584b",
+              "inverse-on-surface": "#9f9c9a",
+              "surface-container-lowest": "#ffffff",
+              "secondary-dim": "#625740",
+              "on-error-container": "#742410",
+              "surface-dim": "#e5e2db",
+              "primary-fixed-dim": "#d6d4d2",
+              "tertiary": "#6a6456",
+              "secondary-fixed": "#f1e0c3",
+              "on-primary": "#faf7f5",
+              "secondary-container": "#f1e0c3",
+              "primary-fixed": "#e4e2e0",
+              "on-secondary-fixed": "#483e29",
+              "on-secondary-fixed-variant": "#665a43",
+              "on-surface-variant": "#666460",
+              "surface-variant": "#ebe8e2",
+              "surface-container": "#f7f3ee",
+              "tertiary-fixed-dim": "#eee4d3",
+              "error-container": "#fe8b70",
+              "error": "#a54731",
+              "inverse-primary": "#ffffff",
+              "on-surface": "#393834",
+              "tertiary-fixed": "#fcf3e1",
+              "on-tertiary-fixed": "#4e493c",
+              "surface-container-high": "#f1ede8",
+              "on-tertiary": "#ffffff",
+              "on-secondary-container": "#5c503a",
+              "tertiary-container": "#fcf3e1",
+              "background": "#fffbff",
+              "on-tertiary-fixed-variant": "#6c6658",
+              "outline": "#82807b",
+              "secondary-fixed-dim": "#e3d2b6"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .step-active { width: 100%; transition: width 1s cubic-bezier(0.19, 1, 0.22, 1); }
+        .kerning-premium { letter-spacing: 0.05rem; }
+        .heading-premium { letter-spacing: 0.2em; text-transform: uppercase; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- Top Navigation Anchor (Shared Component Execution) -->
+<nav class="fixed top-0 w-full z-50 bg-white/60 dark:bg-stone-900/60 backdrop-blur-xl border-b border-outline-variant/15 px-12 py-6 flex justify-between items-center max-w-[1920px] mx-auto">
+<div class="text-2xl font-headline tracking-[0.3em] uppercase text-stone-900 dark:text-stone-50">L'Atelier</div>
+<div class="flex items-center gap-12">
+<button class="material-symbols-outlined text-on-surface hover:opacity-60 transition-opacity" data-icon="close">close</button>
+</div>
+</nav>
+<!-- Main Wizard Canvas -->
+<main class="min-h-screen pt-24 flex flex-col">
+<!-- Progress Bar Section -->
+<div class="w-full max-w-4xl mx-auto px-12 pt-12 pb-8">
+<div class="flex justify-between items-end mb-4">
+<span class="font-headline text-[11px] uppercase tracking-[0.3em] text-secondary">Step 01 / 03</span>
+<span class="font-body text-[11px] uppercase tracking-widest text-outline">Tell us about you</span>
+</div>
+<div class="h-[2px] w-full bg-surface-container-highest relative">
+<div class="absolute top-0 left-0 h-full bg-primary w-1/3 transition-all duration-700"></div>
+</div>
+</div>
+<!-- Split Content Layout -->
+<div class="flex-grow flex flex-col md:flex-row w-full max-w-[1920px] mx-auto overflow-hidden">
+<!-- Left: High Impact Visual -->
+<div class="hidden md:block w-1/2 relative min-h-[600px]">
+<img alt="Event Vision" class="absolute inset-0 w-full h-full object-cover" data-alt="Cinematic wide shot of a luxury dinner event with elegant table settings, crystal glassware, and soft candlelight in a grand stone hall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAShVMeeCRI0VFTHg2cXFFB2YcAvftgJ3kxaVWvhZ_b1VMRZlxB-8gG9wAgt75amUqTxWrFYSxGAtA5eoIqly5sdNTPenmPg5hcaKXIi2PfxX8MG0l44_xFjuqTDFms2lxNM8NJOQUOTchgQbf_uylj6y1Jikyr-m0ReMketD6VJ0uwvIHMVbS0w8PBpfOigD2D37kQUv_pS82ZhaadXqznkydwMLdbQ1isR34nGkD2R3Ies-i3qxCpnp5VT_U2dbM8aT64qMLGnqfP"/>
+<div class="absolute inset-0 bg-stone-900/20 mix-blend-multiply"></div>
+<div class="absolute bottom-16 left-16 max-w-md">
+<h2 class="font-headline text-4xl text-white leading-tight mb-4 tracking-wide">Crafting Timeless Moments</h2>
+<p class="font-body text-stone-200 kerning-premium leading-relaxed opacity-90">Your journey towards an unforgettable experience begins with a single conversation.</p>
+</div>
+</div>
+<!-- Right: Premium Form Content -->
+<div class="w-full md:w-1/2 bg-surface px-8 md:px-24 py-16 overflow-y-auto no-scrollbar">
+<div class="max-w-xl mx-auto">
+<header class="mb-16">
+<h1 class="font-headline text-3xl mb-4 heading-premium">Tell us about you</h1>
+<p class="font-body text-on-surface-variant kerning-premium text-sm">Please share the foundational details of your event so we can begin curating your bespoke proposal.</p>
+</header>
+<form class="space-y-12">
+<!-- Field Group: Name -->
+<div class="group relative border-b border-outline-variant/30 focus-within:border-primary transition-colors duration-500">
+<label class="block font-label text-[10px] uppercase tracking-[0.2em] text-outline group-focus-within:text-primary transition-colors mb-2">Full Name</label>
+<input class="w-full bg-transparent border-none p-0 pb-4 font-body text-lg focus:ring-0 placeholder:text-surface-container-highest uppercase tracking-widest" placeholder="ALEXANDER VANCE" type="text"/>
+</div>
+<!-- Two Column Group -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Event Type -->
+<div class="group relative border-b border-outline-variant/30 focus-within:border-primary transition-colors duration-500">
+<label class="block font-label text-[10px] uppercase tracking-[0.2em] text-outline group-focus-within:text-primary transition-colors mb-2">Event Type</label>
+<select class="w-full bg-transparent border-none p-0 pb-4 font-body text-sm focus:ring-0 uppercase tracking-widest appearance-none">
+<option>PRIVATE GALA</option>
+<option>CORPORATE SOIRÉE</option>
+<option>WEDDING CELEBRATION</option>
+<option>ART EXHIBITION</option>
+</select>
+</div>
+<!-- Date -->
+<div class="group relative border-b border-outline-variant/30 focus-within:border-primary transition-colors duration-500">
+<label class="block font-label text-[10px] uppercase tracking-[0.2em] text-outline group-focus-within:text-primary transition-colors mb-2">Preferred Date</label>
+<input class="w-full bg-transparent border-none p-0 pb-4 font-body text-sm focus:ring-0 uppercase tracking-widest" type="date"/>
+</div>
+</div>
+<!-- Two Column Group -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Guest Count -->
+<div class="group relative border-b border-outline-variant/30 focus-within:border-primary transition-colors duration-500">
+<label class="block font-label text-[10px] uppercase tracking-[0.2em] text-outline group-focus-within:text-primary transition-colors mb-2">Guest Count</label>
+<input class="w-full bg-transparent border-none p-0 pb-4 font-body text-lg focus:ring-0 placeholder:text-surface-container-highest tracking-widest" placeholder="000" type="number"/>
+</div>
+<!-- Budget Range -->
+<div class="group relative border-b border-outline-variant/30 focus-within:border-primary transition-colors duration-500">
+<label class="block font-label text-[10px] uppercase tracking-[0.2em] text-outline group-focus-within:text-primary transition-colors mb-2">Estimated Budget</label>
+<select class="w-full bg-transparent border-none p-0 pb-4 font-body text-sm focus:ring-0 uppercase tracking-widest appearance-none">
+<option>$25,000 - $50,000</option>
+<option>$50,000 - $100,000</option>
+<option>$100,000+</option>
+</select>
+</div>
+</div>
+<!-- Footer Actions -->
+<div class="pt-12 flex flex-col md:flex-row items-center gap-8">
+<button class="w-full md:w-auto px-12 py-5 bg-primary text-on-primary font-label text-xs uppercase tracking-[0.25em] hover:bg-secondary transition-all duration-700 hover:tracking-[0.35em]" type="button">
+                                Continue
+                            </button>
+<button class="w-full md:w-auto font-label text-[10px] uppercase tracking-[0.2em] text-outline hover:text-on-surface transition-colors border-b border-transparent hover:border-on-surface pb-1" type="button">
+                                Save for Later
+                            </button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Content Suppressed for Focused Journey as per Shell Visibility Rules -->
+<!-- Decorative Ambient Layer (Three.js Concept Simulation) -->
+<div class="fixed inset-0 -z-10 pointer-events-none opacity-20 bg-gradient-to-br from-secondary-fixed to-surface"></div>
+</body></html>

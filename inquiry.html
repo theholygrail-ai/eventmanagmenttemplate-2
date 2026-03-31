@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L'Atelier | Inquiry</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/prototype.css">
+</head>
+<body>
+  <header class="site-header"><div class="container header-row"><a class="logo" href="index.html">L'Atelier</a><nav class="nav"><a href="index.html">Home</a><a href="services.html">Services</a><a href="gallery.html">Gallery</a><a href="about.html">About</a><a class="active" href="inquiry.html">Inquiry</a></nav><a class="btn btn-primary" href="contact.html">Contact</a></div></header>
+  <section class="section alt">
+    <div class="container">
+      <p class="kicker" data-hero-kicker>inquiry funnel</p>
+      <h1 data-hero-title>Tell Us About Your Event</h1>
+      <p data-hero-copy>A guided, conversion-friendly flow that captures essentials without overwhelming first-time leads.</p>
+      <div class="form-shell" data-inquiry-wizard>
+        <div style="height:2px;background:var(--outline);margin-bottom:20px;"><div data-progress style="height:100%; width:33%; background:var(--primary);"></div></div>
+        <form>
+          <div class="wizard-step active">
+            <h3>Step 1: Core Details</h3>
+            <div class="row"><input placeholder="Full name"><input placeholder="Email"></div>
+            <div class="row"><input placeholder="Event date" type="date"><input placeholder="Guest count" type="number"></div>
+            <div style="margin-top:14px;"><button class="btn btn-primary" type="button" data-next>Continue</button></div>
+          </div>
+          <div class="wizard-step">
+            <h3>Step 2: Event Scope</h3>
+            <div class="row"><select><option>Wedding</option><option>Corporate</option><option>Private</option></select><select><option>Strategic Planning</option><option>Aesthetic Styling</option><option>Full Curation</option></select></div>
+            <textarea placeholder="Describe your vision, vibe, and any non-negotiables"></textarea>
+            <div style="margin-top:14px;"><button class="btn btn-outline" type="button" data-prev>Back</button> <button class="btn btn-primary" type="button" data-next>Continue</button></div>
+          </div>
+          <div class="wizard-step">
+            <h3>Step 3: Budget + Location</h3>
+            <div class="row"><select><option>$25k-$50k</option><option>$50k-$100k</option><option>$100k+</option></select><input placeholder="City / Venue"></div>
+            <div style="margin-top:14px;"><button class="btn btn-outline" type="button" data-prev>Back</button> <button class="btn btn-primary" type="button" data-next>Submit Inquiry</button></div>
+          </div>
+        </form>
+        <div data-success hidden><h3>Inquiry Received</h3><p>Thank you. Our team will respond with next steps and scheduling options within one business day.</p><a href="booking.html" class="btn btn-primary">Schedule Consultation</a></div>
+      </div>
+    </div>
+  </section>
+  <footer class="site-footer"><div class="container footer-grid"><div><p class="logo">L'Atelier</p><p>Form-first onboarding for premium event projects.</p></div><div class="footer-links"><a href="services.html">Services</a><a href="gallery.html">Gallery</a><a href="about.html">About</a><a href="contact.html">Contact</a></div><div class="footer-links"><a href="quote.html">Quote</a><a href="booking.html">Book</a><a href="inquiry.html">Inquiry</a></div></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script><script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script><script src="assets/js/site.js"></script>
+</body>
+</html>

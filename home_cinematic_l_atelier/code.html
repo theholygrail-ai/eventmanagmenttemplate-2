@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "outline-variant": "#bcb9b3",
+              "on-error": "#ffffff",
+              "surface-container-highest": "#ebe8e2",
+              "surface": "#fffbff",
+              "on-background": "#393834",
+              "primary-dim": "#535251",
+              "surface-tint": "#5f5e5d",
+              "surface-bright": "#fffbff",
+              "inverse-surface": "#0e0e0d",
+              "on-secondary": "#ffffff",
+              "surface-container-low": "#fdf9f5",
+              "error-dim": "#5c1202",
+              "secondary": "#6f634c",
+              "primary": "#5f5e5d",
+              "on-primary-fixed-variant": "#5c5b5a",
+              "primary-container": "#e4e2e0",
+              "on-tertiary-container": "#615b4e",
+              "on-primary-container": "#525250",
+              "on-primary-fixed": "#3f3f3e",
+              "tertiary-dim": "#5d584b",
+              "inverse-on-surface": "#9f9c9a",
+              "surface-container-lowest": "#ffffff",
+              "secondary-dim": "#625740",
+              "on-error-container": "#742410",
+              "surface-dim": "#e5e2db",
+              "primary-fixed-dim": "#d6d4d2",
+              "tertiary": "#6a6456",
+              "secondary-fixed": "#f1e0c3",
+              "on-primary": "#faf7f5",
+              "secondary-container": "#f1e0c3",
+              "primary-fixed": "#e4e2e0",
+              "on-secondary-fixed": "#483e29",
+              "on-secondary-fixed-variant": "#665a43",
+              "on-surface-variant": "#666460",
+              "surface-variant": "#ebe8e2",
+              "surface-container": "#f7f3ee",
+              "tertiary-fixed-dim": "#eee4d3",
+              "error-container": "#fe8b70",
+              "error": "#a54731",
+              "inverse-primary": "#ffffff",
+              "on-surface": "#393834",
+              "tertiary-fixed": "#fcf3e1",
+              "on-tertiary-fixed": "#4e493c",
+              "surface-container-high": "#f1ede8",
+              "on-tertiary": "#ffffff",
+              "on-secondary-container": "#5c503a",
+              "tertiary-container": "#fcf3e1",
+              "background": "#fffbff",
+              "on-tertiary-fixed-variant": "#6c6658",
+              "outline": "#82807b",
+              "secondary-fixed-dim": "#e3d2b6"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-underline {
+            position: relative;
+        }
+        .editorial-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            width: 0;
+            height: 1px;
+            background-color: currentColor;
+            transition: width 0.7s ease-in-out, left 0.7s ease-in-out;
+        }
+        .editorial-underline:hover::after {
+            width: 100%;
+            left: 0;
+        }
+        .glass-panel {
+            background: rgba(235, 232, 226, 0.6);
+            backdrop-filter: blur(20px);
+        }
+        .mask-image-radial {
+            mask-image: radial-gradient(circle at center, black 30%, transparent 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/60 dark:bg-stone-900/60 backdrop-blur-xl border-b border-outline-variant/15">
+<div class="flex justify-between items-center px-12 py-6 w-full max-w-[1920px] mx-auto">
+<div class="text-2xl font-headline tracking-[0.3em] uppercase text-stone-900 dark:text-stone-50">
+                L'Atelier
+            </div>
+<div class="hidden md:flex gap-12">
+<a class="text-stone-900 dark:text-stone-50 border-b border-stone-900 dark:border-stone-50 pb-1 font-body tracking-wider uppercase text-[11px]" href="#">Home</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors duration-500 font-body tracking-wider uppercase text-[11px] hover:tracking-[0.15rem]" href="#">Services</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors duration-500 font-body tracking-wider uppercase text-[11px] hover:tracking-[0.15rem]" href="#">Gallery</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors duration-500 font-body tracking-wider uppercase text-[11px] hover:tracking-[0.15rem]" href="#">About</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors duration-500 font-body tracking-wider uppercase text-[11px] hover:tracking-[0.15rem]" href="#">Inquiry</a>
+</div>
+<button class="bg-primary text-on-primary px-8 py-3 text-[11px] uppercase tracking-[0.2em] transition-all duration-700 ease-out hover:tracking-[0.25rem] hover:bg-secondary">
+                Plan My Event
+            </button>
+</div>
+</nav>
+<main class="relative">
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-24 overflow-hidden bg-surface-container">
+<div class="absolute inset-0 z-0 opacity-40">
+<img alt="" class="w-full h-full object-cover" data-alt="Dreamy wide shot of a luxury ballroom with floor-to-ceiling windows and soft morning light hitting crystal chandeliers and white silk drapery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiIhfrlO2LzKXlFMxeDUXbRttnXW0m38TdDIM_EBE-ROojiC_LyE-b8-xaZ6VYbFnzxGjWlo2FGJKpQu12kxk5e2wChFAXMuDVt5puKASKq1N6XVC9QcX3GfiIUznanH7Q4kmNNJ7IFhvFpDwxgfDY7Jtnl79VkcZOeL2QKJimWuNq5F4lINU4BGoBbrorvd9o5nyECuNLd4ijKyRPHhxRjqQFZ4EQCGq0cLka0gkcqy38WgpRcF0iT3j8txoQGLNG8LPVNgfiY9FD"/>
+</div>
+<!-- Three.js Placeholder Area -->
+<div class="absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-4/5 z-10 pointer-events-none hidden lg:block">
+<div class="w-full h-full flex items-center justify-center">
+<!-- This area is reserved for the 'Three.js floating glass-petal object' -->
+<div class="w-[500px] h-[500px] rounded-full blur-[100px] bg-secondary-fixed/30 animate-pulse"></div>
+</div>
+</div>
+<div class="relative z-20 container mx-auto px-12 lg:px-24">
+<div class="max-w-3xl">
+<span class="block font-body uppercase tracking-[0.4em] text-secondary text-[12px] mb-8" data-gsap="reveal">The Bespoke Experience</span>
+<h1 class="font-headline text-6xl md:text-8xl leading-tight text-on-surface mb-12 tracking-tight" data-gsap="reveal">
+                        Architects of <br/>
+<span class="italic font-normal">Timeless</span> Celebration.
+                    </h1>
+<p class="font-body text-lg text-on-surface-variant max-w-lg mb-12 leading-relaxed tracking-wide" data-gsap="reveal">
+                        We don't just plan events; we curate atmospheres. Every detail is a note in a symphony of sensory experiences designed exclusively for you.
+                    </p>
+<div class="flex gap-8 items-center" data-gsap="reveal">
+<button class="bg-on-background text-surface px-10 py-5 text-[12px] uppercase tracking-[0.3em] transition-all duration-700 hover:tracking-[0.4em]">
+                            Plan My Event
+                        </button>
+<a class="font-label text-[12px] uppercase tracking-[0.3em] editorial-underline text-on-background" href="#">
+                            View Portfolio
+                        </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Signature Packages - Staggered Layout -->
+<section class="py-32 px-12 lg:px-24 bg-surface">
+<div class="max-w-[1920px] mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+<h2 class="font-headline text-5xl tracking-tight max-w-xl">
+                        Signature <span class="italic font-normal">Experiences</span>
+</h2>
+<p class="font-body text-on-surface-variant max-w-md text-right tracking-wide">
+                        Tiered levels of orchestration, from conceptual consulting to full-scale immersive production.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-24 items-start">
+<!-- Package 1 -->
+<div class="flex flex-col gap-8 md:translate-y-12">
+<div class="aspect-[4/5] bg-surface-container overflow-hidden group">
+<img alt="" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 desaturate-[0.2]" data-alt="Minimalist luxury dinner setting with a single tall taper candle, delicate gold-rimmed porcelain, and a single white orchid on a textured beige linen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIiXiNtWd2wV5mfEPId-kVcEMvt-Q-VY6CHn4RpDCH0qYUW1mWyJGwHepxreeDzfCkSoXKu6gslodro2C-i5s8AB42pNmrEvqP8xygPCk5p5_Zc7duOKt4Blswd5Z04SDKra2sjeo1W4ft4DqqxDMR6rKeJu6bLezEvXkeHQCD4Ucer8V0rZYm-v03nvpa7F-tmKBqH3mnaiKwkup-EF2t_3VCrigGvnffaWsSNXXZD_okkIoAIVrIlYVsJly0N9EOs_uOKLclicQq"/>
+</div>
+<div>
+<span class="block font-label text-[10px] uppercase tracking-[0.3em] text-secondary mb-3">Tier I</span>
+<h3 class="font-headline text-2xl mb-4">The Muse</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6 font-body">Creative direction and conceptual blueprinting for the visionary host who seeks a refined foundation.</p>
+<a class="font-label text-[10px] uppercase tracking-[0.2em] editorial-underline inline-block" href="#">Explore Tier</a>
+</div>
+</div>
+<!-- Package 2 -->
+<div class="flex flex-col gap-8">
+<div class="aspect-[4/5] bg-surface-container overflow-hidden group">
+<img alt="" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 desaturate-[0.2]" data-alt="Aerial view of a long banquet table under a canopy of warm fairy lights in an ancient stone courtyard during twilight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5LxrF00zEn69P6gW7def4xIb72tYpyC4npBgvzEV9wYvFAUrcYbmwboaviebXCu9WA1bRKXMnc--WRC2PJyj589X8sK3SYecz0oH6GV69HvmS2HhhzX9jHv-TEWsY49fZGmLUPzQTeIG84sJrZG0shalLm-w78yYHbK6Ts3yWYKbipG4CLBqq_eD4cPmqlqgviqThCY0BzrtUZaXkSKqX3UWJAfrCEh71nqV2hkMOJDu7EfQx_ctqLJMiWDgmmWKHo5Q35aBI-mZd"/>
+</div>
+<div>
+<span class="block font-label text-[10px] uppercase tracking-[0.3em] text-secondary mb-3">Tier II</span>
+<h3 class="font-headline text-2xl mb-4">The Curator</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6 font-body">Comprehensive management from vendor selection to execution, ensuring a seamless journey from thought to reality.</p>
+<a class="font-label text-[10px] uppercase tracking-[0.2em] editorial-underline inline-block" href="#">Explore Tier</a>
+</div>
+</div>
+<!-- Package 3 -->
+<div class="flex flex-col gap-8 md:translate-y-24">
+<div class="aspect-[4/5] bg-surface-container overflow-hidden group">
+<img alt="" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 desaturate-[0.2]" data-alt="A fashion-forward wedding reception setup with abstract floral sculptures and avant-garde seating in a high-ceilinged industrial gallery space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd_M4JDkRCAsfZiipGwYy2KZUHk8ILPsEecyNQkH9RzPeAEqKpoh3jy3P5rif_54X0Q8XlFvvRmoQxqJZ9snyBhHU1lhpDpe3Wx0lsi6pwuIYSS_StGoDAtIPSulafgEm5Z8ReMgIyuy4gJI8xVmADM3l4AxT0u6usf3-BaNz2kgUkKZHjV9xcyY8hTboqq3CNQPb8OLUcXrWRrb9TsWIZRVygXxnhQ_1K5MtJtcEj-3bjLNiOq4-6LVlDJFnUnl0YckxKU18VadCI"/>
+</div>
+<div>
+<span class="block font-label text-[10px] uppercase tracking-[0.3em] text-secondary mb-3">Tier III</span>
+<h3 class="font-headline text-2xl mb-4">The Atelier</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6 font-body">Our flagship service. A total immersion experience where we handle every sensory touchpoint, from soundscapes to custom furniture.</p>
+<a class="font-label text-[10px] uppercase tracking-[0.2em] editorial-underline inline-block" href="#">Explore Tier</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Preview - Layered Masonry -->
+<section class="py-48 px-12 lg:px-24 bg-surface-container overflow-hidden">
+<div class="max-w-[1920px] mx-auto grid grid-cols-12 gap-8 items-center">
+<div class="col-span-12 lg:col-span-4 z-10">
+<h2 class="font-headline text-5xl md:text-6xl mb-12 leading-tight">
+                        Moments <br/>
+<span class="italic font-normal">Worth More</span> <br/>
+                        Than Words
+                    </h2>
+<p class="font-body text-on-surface-variant mb-12 leading-loose max-w-sm">
+                        Browse our archive of recent celebrations. Each frame tells a story of meticulous planning and spontaneous joy.
+                    </p>
+<button class="font-label text-[12px] uppercase tracking-[0.4em] px-10 py-5 border border-outline-variant hover:bg-on-background hover:text-surface transition-all duration-500">
+                        Enter Gallery
+                    </button>
+</div>
+<div class="col-span-12 lg:col-span-8 relative min-h-[800px]">
+<!-- Layered Image Grid -->
+<div class="absolute top-0 right-0 w-[60%] aspect-[4/5] z-0 overflow-hidden">
+<img alt="" class="w-full h-full object-cover grayscale-[30%]" data-alt="Close up of a bride laughing during a toast, wearing a minimalist modern dress, soft warm evening light, high-end editorial photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIX7nKTs8YAJASrv2rVZ-W0xeu7aXPf-OI3HCHLOgYA2U811TfmDBQTPM29IkgGGhGc4L-Us6lgK3AZDoVQ7DB1RARw6SyCw2gMp4JsYNEGh_rhWFs6n8eCGnNyc1nFjjNe46pjtY6Udk03Pay-Gi6KNaHvFWbIgWPG5KpC6orSbXG_yQs5RrzM8s-j44vKdkvFJ7eRlOsvaqgatlJlOa9dqPpgZ3UmptQiQnkzlJRxMbObmRoByNiYdHuJsuBBwcY2IrIUNzukEWK"/>
+</div>
+<div class="absolute bottom-10 left-10 w-[45%] aspect-square z-20 overflow-hidden border-[16px] border-surface-container">
+<img alt="" class="w-full h-full object-cover" data-alt="Elegant champagne tower with vintage coupes and fine bubbles being poured, backlit by soft golden hour light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6K__3sEQCovB9XdAJQOYWTku-y65BsOravvuvTKmlGsRn-RMjmmHsygb4IOXLPOopaNocc55lKGVt-5eD7UMkATASnkX2JnXxyG8tNTb0aq8UaYj37ho-vPYwcfWcvCD7KeOxJdsIsjfNtx-iNzffyYwE1C0pXzorltVdBO6QBYgHAhrbI7otD5oatiNzWZ9HB6lZn-1mxr_WzbaxPEt0xXCXCfvvsqy13CM_4Rie0i1O8Zzkla2-tEi7BHLWPpzsoIauzDm5piV3"/>
+</div>
+<div class="absolute top-1/4 left-1/4 w-[35%] aspect-[3/4] z-10 glass-panel p-4 overflow-hidden">
+<img alt="" class="w-full h-full object-cover contrast-125" data-alt="Modern indoor-outdoor reception space with olive trees, white flowers, and architectural lighting under a clear evening sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlMqX1Wmil7QEjucxW50qgWpXzaIDxcXzFBD9b6f0PNF3xwMqWvZJmDVNZayWxMQWqN0Cw_wxIaLdDMz6S0GIUPfdNJ9sfLOzXDxYXALRdqp2jXbUXDssreGeLZeKkqAkp04LhtA8sQc5UUGWEx0OoUp7d4k-yUbEnjvuVm7UhfeZbGCuEe9Gyf18gJV7YROfIMCyQHuYhGLhAmMoZvkrRY-h8e09J9fcVepRI_H0YurfG9h2Seq4NTg6ryMiwiKakgZCzpXrWhsnn"/>
+</div>
+</div>
+</div>
+</section>
+<!-- The Art of the Journey - Process Strip -->
+<section class="py-48 px-12 lg:px-24 bg-surface">
+<div class="max-w-[1920px] mx-auto">
+<div class="text-center mb-32">
+<span class="block font-label text-[11px] uppercase tracking-[0.5em] text-secondary mb-6">Our Process</span>
+<h2 class="font-headline text-5xl tracking-tight">The Art of the <span class="italic font-normal">Journey</span></h2>
+</div>
+<div class="flex flex-col md:flex-row gap-0 border-y border-outline-variant/20">
+<div class="flex-1 p-16 border-r border-outline-variant/20 hover:bg-surface-container-low transition-colors duration-700 group">
+<span class="font-headline text-5xl text-outline-variant/30 mb-12 block group-hover:text-secondary transition-colors duration-700 italic">01</span>
+<h4 class="font-headline text-xl mb-6 uppercase tracking-widest">Discovery</h4>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed">An intimate consultation to uncover your aesthetic DNA and the emotional pulse of your event.</p>
+</div>
+<div class="flex-1 p-16 border-r border-outline-variant/20 hover:bg-surface-container-low transition-colors duration-700 group">
+<span class="font-headline text-5xl text-outline-variant/30 mb-12 block group-hover:text-secondary transition-colors duration-700 italic">02</span>
+<h4 class="font-headline text-xl mb-6 uppercase tracking-widest">Curation</h4>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed">Developing a sensory moodboard and sourcing the perfect architectural and culinary partners.</p>
+</div>
+<div class="flex-1 p-16 border-r border-outline-variant/20 hover:bg-surface-container-low transition-colors duration-700 group">
+<span class="font-headline text-5xl text-outline-variant/30 mb-12 block group-hover:text-secondary transition-colors duration-700 italic">03</span>
+<h4 class="font-headline text-xl mb-6 uppercase tracking-widest">Refinement</h4>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed">Finalizing every detail—from the weight of the cardstock to the lighting transitions—to perfection.</p>
+</div>
+<div class="flex-1 p-16 hover:bg-surface-container-low transition-colors duration-700 group">
+<span class="font-headline text-5xl text-outline-variant/30 mb-12 block group-hover:text-secondary transition-colors duration-700 italic">04</span>
+<h4 class="font-headline text-xl mb-6 uppercase tracking-widest">Genesis</h4>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed">The day your vision takes breath. Our team orchestrates the performance while you enjoy the moment.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Final Conversion -->
+<section class="py-48 px-12 lg:px-24 bg-on-background text-surface text-center">
+<div class="max-w-4xl mx-auto">
+<h2 class="font-headline text-5xl md:text-7xl mb-16 leading-tight tracking-tight">
+                    Ready to define your <br/> <span class="italic font-normal">Legacy</span>?
+                </h2>
+<div class="flex flex-col md:flex-row justify-center gap-12 items-center">
+<button class="bg-surface text-on-background px-12 py-6 text-[14px] uppercase tracking-[0.4em] transition-all duration-700 hover:tracking-[0.6em] hover:bg-secondary-fixed">
+                        Plan My Event
+                    </button>
+<a class="font-label text-[14px] uppercase tracking-[0.4em] editorial-underline text-surface" href="mailto:hello@latelier.com">
+                        hello@latelier.com
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-950 dark:bg-black text-stone-100 dark:text-stone-200 border-t border-white/5">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-16 px-12 py-24 w-full max-w-[1920px] mx-auto">
+<div class="col-span-1 md:col-span-2">
+<div class="text-3xl font-headline tracking-widest text-stone-100 mb-8 uppercase">L'Atelier</div>
+<p class="font-body text-stone-500 max-w-sm tracking-wide leading-relaxed mb-12">
+                    A global event design house specializing in high-concept celebrations for discerning individuals and brands.
+                </p>
+<div class="flex gap-8">
+<a class="hover:opacity-80 transition-opacity duration-300" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="share">share</span>
+</a>
+<a class="hover:opacity-80 transition-opacity duration-300" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="photo_camera">photo_camera</span>
+</a>
+<a class="hover:opacity-80 transition-opacity duration-300" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="mail">mail</span>
+</a>
+</div>
+</div>
+<div>
+<h5 class="font-headline text-lg mb-8 italic">Navigational</h5>
+<ul class="flex flex-col gap-4 font-body text-[11px] uppercase tracking-widest">
+<li><a class="text-stone-500 hover:text-stone-100 transition-colors duration-500" href="#">Services</a></li>
+<li><a class="text-stone-500 hover:text-stone-100 transition-colors duration-500" href="#">Gallery</a></li>
+<li><a class="text-stone-500 hover:text-stone-100 transition-colors duration-500" href="#">Inquiry</a></li>
+<li><a class="text-stone-500 hover:text-stone-100 transition-colors duration-500" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-headline text-lg mb-8 italic">Newsletter</h5>
+<p class="font-body text-stone-500 text-xs mb-8 tracking-wider">Join our circle for seasonal inspiration and private event access.</p>
+<div class="relative">
+<input class="w-full bg-transparent border-0 border-b border-stone-700 pb-4 text-[10px] tracking-widest focus:ring-0 focus:border-stone-100 transition-colors duration-500 placeholder:text-stone-700" placeholder="YOUR EMAIL" type="email"/>
+<button class="absolute right-0 top-0 text-stone-500 hover:text-stone-100">
+<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="px-12 py-8 border-t border-white/5 flex justify-between items-center text-[10px] font-body tracking-[0.2em] text-stone-600 uppercase">
+<span>© 2024 L'Atelier. All rights reserved.</span>
+<div class="flex gap-8">
+<a class="hover:text-stone-400" href="#">Instagram</a>
+<a class="hover:text-stone-400" href="#">Vimeo</a>
+</div>
+</div>
+</footer>
+</body></html>

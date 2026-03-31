@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>L'Atelier | Services Overview</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "outline-variant": "#bcb9b3",
+              "on-error": "#ffffff",
+              "surface-container-highest": "#ebe8e2",
+              "surface": "#fffbff",
+              "on-background": "#393834",
+              "primary-dim": "#535251",
+              "surface-tint": "#5f5e5d",
+              "surface-bright": "#fffbff",
+              "inverse-surface": "#0e0e0d",
+              "on-secondary": "#ffffff",
+              "surface-container-low": "#fdf9f5",
+              "error-dim": "#5c1202",
+              "secondary": "#6f634c",
+              "primary": "#5f5e5d",
+              "on-primary-fixed-variant": "#5c5b5a",
+              "primary-container": "#e4e2e0",
+              "on-tertiary-container": "#615b4e",
+              "on-primary-container": "#525250",
+              "on-primary-fixed": "#3f3f3e",
+              "tertiary-dim": "#5d584b",
+              "inverse-on-surface": "#9f9c9a",
+              "surface-container-lowest": "#ffffff",
+              "secondary-dim": "#625740",
+              "on-error-container": "#742410",
+              "surface-dim": "#e5e2db",
+              "primary-fixed-dim": "#d6d4d2",
+              "tertiary": "#6a6456",
+              "secondary-fixed": "#f1e0c3",
+              "on-primary": "#faf7f5",
+              "secondary-container": "#f1e0c3",
+              "primary-fixed": "#e4e2e0",
+              "on-secondary-fixed": "#483e29",
+              "on-secondary-fixed-variant": "#665a43",
+              "on-surface-variant": "#666460",
+              "surface-variant": "#ebe8e2",
+              "surface-container": "#f7f3ee",
+              "tertiary-fixed-dim": "#eee4d3",
+              "error-container": "#fe8b70",
+              "error": "#a54731",
+              "inverse-primary": "#ffffff",
+              "on-surface": "#393834",
+              "tertiary-fixed": "#fcf3e1",
+              "on-tertiary-fixed": "#4e493c",
+              "surface-container-high": "#f1ede8",
+              "on-tertiary": "#ffffff",
+              "on-secondary-container": "#5c503a",
+              "tertiary-container": "#fcf3e1",
+              "background": "#fffbff",
+              "on-tertiary-fixed-variant": "#6c6658",
+              "outline": "#82807b",
+              "secondary-fixed-dim": "#e3d2b6"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0rem", "lg": "0rem", "xl": "0rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .text-kern-wide { letter-spacing: 0.15em; }
+        .text-kern-extra { letter-spacing: 0.3em; }
+        .glass-nav { backdrop-filter: blur(20px); }
+        .clip-path-reveal { clip-path: inset(0 100% 0 0); transition: clip-path 0.7s cubic-bezier(0.19, 1, 0.22, 1); }
+        .group:hover .clip-path-reveal { clip-path: inset(0 0 0 0); }
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3, .serif { font-family: 'Noto Serif', serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-white/60 dark:bg-stone-900/60 backdrop-blur-xl border-b border-outline-variant/15">
+<div class="flex justify-between items-center px-12 py-6 w-full max-w-[1920px] mx-auto">
+<div class="text-2xl font-serif tracking-[0.3em] uppercase text-stone-900 dark:text-stone-50">
+                L'Atelier
+            </div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors duration-500 Noto Serif tracking-[0.2em] uppercase text-sm" href="#">Home</a>
+<a class="text-stone-900 dark:text-stone-50 border-b border-stone-900 dark:border-stone-50 pb-1 Noto Serif tracking-[0.2em] uppercase text-sm" href="#">Services</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors duration-500 Noto Serif tracking-[0.2em] uppercase text-sm" href="#">Gallery</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors duration-500 Noto Serif tracking-[0.2em] uppercase text-sm" href="#">About</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors duration-500 Noto Serif tracking-[0.2em] uppercase text-sm" href="#">Inquiry</a>
+</div>
+<button class="bg-primary text-on-primary px-8 py-3 text-sm tracking-widest uppercase hover:tracking-[0.15rem] transition-all duration-700 ease-out">
+                Plan My Event
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative pt-48 pb-32 px-12 overflow-hidden bg-surface-container">
+<div class="max-w-[1920px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-end">
+<div class="md:col-span-7">
+<span class="block text-secondary text-kern-wide uppercase text-sm mb-6">Our Expertise</span>
+<h1 class="text-6xl md:text-8xl leading-[1.1] mb-8 tracking-tight">Curation as <br/><span class="italic">Art Form</span>.</h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-xl leading-relaxed font-light tracking-wide">
+                    From intimate celebrations to grand architectural galas, we orchestrate every detail with the precision of a master tailor.
+                </p>
+</div>
+<div class="md:col-span-5 hidden md:block">
+<div class="relative aspect-[4/5] w-full overflow-hidden">
+<img alt="Elegant table setting" class="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-1000 scale-105" data-alt="Close-up of a minimalist high-end wedding table setting with bone china, champagne glasses, and delicate floral arrangements in soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlQFBxI3GXMR48BIu-q_9fkX1PMKpKACs88Wp7DxVoA3IkhwO3GBNMUryFw989Wx3JKminCwItKhPdK4J65_INBMCY_OINaZRzcR8EvKzLQr69mtiFkDfUJGPArAFTv6cHM3_xOquSJQrxcdGmC5h4ZIxCRkaU6KwRpeH8c5rnp1LNiM_kYsCTACu3jdcHIKe0ANl-RyeKhcYYfgFn40oozs0Y_n94khX_jKNKq9z4UrEL-Mjk2NKXosp9moPnt9KGhkamFnFN3_Zp"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Service Tiers Section -->
+<section class="py-32 px-12 bg-surface">
+<div class="max-w-[1920px] mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-0 border-outline-variant/15 border">
+<!-- Planning Tier -->
+<div class="group relative p-16 border-r border-outline-variant/15 transition-all duration-700 hover:bg-surface-container-low cursor-pointer">
+<div class="flex justify-between items-start mb-24">
+<span class="text-xs font-bold uppercase tracking-widest opacity-40">01</span>
+<span class="material-symbols-outlined text-4xl font-extralight text-primary">architecture</span>
+</div>
+<h3 class="text-4xl mb-6 tracking-wide">Strategic <br/>Planning</h3>
+<p class="text-on-surface-variant leading-relaxed mb-12 tracking-wide font-light">
+                        For the visionaries who have the dream but need the architectural blueprint to bring it to life. We handle the logistics, vendors, and timelines.
+                    </p>
+<ul class="space-y-4 mb-16 text-sm uppercase tracking-widest text-on-surface/70">
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-secondary"></span> Venue Scouting</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-secondary"></span> Budget Management</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-secondary"></span> Vendor Procurement</li>
+</ul>
+<a class="inline-block group-hover:tracking-widest transition-all duration-500 border-b border-on-surface pb-1 text-sm uppercase font-bold" href="#">View Details</a>
+</div>
+<!-- Styling Tier -->
+<div class="group relative p-16 border-r border-outline-variant/15 transition-all duration-700 hover:bg-surface-container-low cursor-pointer">
+<div class="flex justify-between items-start mb-24">
+<span class="text-xs font-bold uppercase tracking-widest opacity-40">02</span>
+<span class="material-symbols-outlined text-4xl font-extralight text-primary">palette</span>
+</div>
+<h3 class="text-4xl mb-6 tracking-wide">Aesthetic <br/>Styling</h3>
+<p class="text-on-surface-variant leading-relaxed mb-12 tracking-wide font-light">
+                        Visual storytelling through textures, lighting, and spatial design. We curate the atmosphere that lingers in memories long after the night ends.
+                    </p>
+<ul class="space-y-4 mb-16 text-sm uppercase tracking-widest text-on-surface/70">
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-secondary"></span> Mood Board Curation</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-secondary"></span> Floral Design Direction</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-secondary"></span> Lighting &amp; Furniture</li>
+</ul>
+<a class="inline-block group-hover:tracking-widest transition-all duration-500 border-b border-on-surface pb-1 text-sm uppercase font-bold" href="#">View Details</a>
+</div>
+<!-- Full Service Tier -->
+<div class="group relative p-16 transition-all duration-700 hover:bg-stone-900 hover:text-white cursor-pointer overflow-hidden">
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-24">
+<span class="text-xs font-bold uppercase tracking-widest opacity-40">03</span>
+<span class="material-symbols-outlined text-4xl font-extralight text-secondary-fixed">auto_awesome</span>
+</div>
+<h3 class="text-4xl mb-6 tracking-wide">Full <br/>Curation</h3>
+<p class="text-on-surface-variant group-hover:text-stone-400 leading-relaxed mb-12 tracking-wide font-light">
+                            The definitive L'Atelier experience. A seamless integration of planning and styling from conception to final departure.
+                        </p>
+<ul class="space-y-4 mb-16 text-sm uppercase tracking-widest group-hover:text-stone-300">
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-secondary-fixed"></span> End-to-End Orchestration</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-secondary-fixed"></span> On-Site Directing</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-secondary-fixed"></span> Guest Experience Suite</li>
+</ul>
+<button class="w-full bg-secondary-fixed text-on-secondary-fixed py-5 text-sm tracking-widest uppercase hover:bg-white hover:text-black transition-colors duration-500">
+                            Get a Quote
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- How We Weave Your Story - Timeline -->
+<section class="py-32 px-12 bg-surface-container-low overflow-hidden">
+<div class="max-w-[1920px] mx-auto">
+<div class="flex flex-col md:flex-row gap-24 items-start">
+<div class="md:w-1/3 sticky top-32">
+<h2 class="text-5xl mb-8 tracking-tight leading-tight italic">How We Weave <br/>Your Story.</h2>
+<p class="text-on-surface-variant leading-relaxed max-w-sm font-light tracking-wide">
+                        A cinematic approach to event design. Each phase is handled with meticulous care and artistic intent.
+                    </p>
+</div>
+<div class="md:w-2/3 space-y-32 relative">
+<!-- Timeline Line -->
+<div class="absolute left-0 top-0 w-px h-full bg-outline-variant/30 hidden md:block"></div>
+<!-- Phase 1 -->
+<div class="relative pl-0 md:pl-16 group">
+<div class="absolute -left-1.5 top-2 w-3 h-3 bg-secondary hidden md:block transition-transform duration-500 group-hover:scale-150"></div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div>
+<h4 class="text-xs uppercase tracking-[0.3em] text-secondary mb-4">Phase One</h4>
+<h3 class="text-3xl mb-6 font-serif tracking-wide">The Discovery</h3>
+<p class="text-on-surface-variant leading-relaxed font-light tracking-wide">
+                                    We begin by understanding your history, your tastes, and your silences. This is where the core narrative of your event is born.
+                                </p>
+</div>
+<div class="aspect-video bg-surface-container overflow-hidden">
+<img alt="Journal and coffee" class="w-full h-full object-cover grayscale opacity-60 hover:opacity-100 transition-opacity duration-1000" data-alt="Overhead shot of an open vintage journal with handwritten notes, a silver pen, and a cup of coffee on a textured stone surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA99dpL4qu43IZv_nNimBCH5GbDrulHtj8Y8-A-JcnTEKC6JLBxXTuUZhInrXZWUlSAdj5eUioHqjRA9q0bRtjJDTH9GRcbzp9e5SzMkcGPzAPPxhd1KpkJFUuRIz1ECfUb77FGD_kQJ0Xyr1PebicuSc9dpipVzWD6kOsACNIm_UqvNntBRkJ4rDv9hBp90lrumIn-A6w5vmNpaprz1551WmK2JLjUiHaF_Oujnq-IXzMPIeDrodjID_KCUDBnKZejVWcSmx84Kxid"/>
+</div>
+</div>
+</div>
+<!-- Phase 2 -->
+<div class="relative pl-0 md:pl-16 group">
+<div class="absolute -left-1.5 top-2 w-3 h-3 bg-secondary hidden md:block transition-transform duration-500 group-hover:scale-150"></div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div>
+<h4 class="text-xs uppercase tracking-[0.3em] text-secondary mb-4">Phase Two</h4>
+<h3 class="text-3xl mb-6 font-serif tracking-wide">The Composition</h3>
+<p class="text-on-surface-variant leading-relaxed font-light tracking-wide">
+                                    Translating concepts into textures. We source swatches, sketch layouts, and assemble the palette that defines your atmosphere.
+                                </p>
+</div>
+<div class="aspect-video bg-surface-container overflow-hidden">
+<img alt="Fabric swatches" class="w-full h-full object-cover grayscale opacity-60 hover:opacity-100 transition-opacity duration-1000" data-alt="Collection of silk, linen, and velvet fabric swatches in muted stone and beige tones arranged artistically on a light wood table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFSyevaCNCj4D5v_IZaz-bHKxYpiI5OMNpToZWa9JQIa6zE0xeRgPhIKYeKoVFhx6672AE_mnWHvCoyvCjMwrr_HKxZbOtbLR39pLaogjDsaqerTFQrRCjuknUMWma2w0v7IU2neyvi-JPMOU8lQyox6rF4UzZ6yJg6v1CB4Wf_QT6fkv2Pjl96QMGuOxLgaqDovKALb8Xbw__ZxGutQ8R53HeXxvtrl6gBrjVzgd3WNcIdJAJsa8aOaxRxC5pS6_P6Xjs9mMIMVnj"/>
+</div>
+</div>
+</div>
+<!-- Phase 3 -->
+<div class="relative pl-0 md:pl-16 group">
+<div class="absolute -left-1.5 top-2 w-3 h-3 bg-secondary hidden md:block transition-transform duration-500 group-hover:scale-150"></div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div>
+<h4 class="text-xs uppercase tracking-[0.3em] text-secondary mb-4">Phase Three</h4>
+<h3 class="text-3xl mb-6 font-serif tracking-wide">The Performance</h3>
+<p class="text-on-surface-variant leading-relaxed font-light tracking-wide">
+                                    Execution with quiet confidence. Our team oversees every installation, ensuring the reality exceeds the vision in every light.
+                                </p>
+</div>
+<div class="aspect-video bg-surface-container overflow-hidden">
+<img alt="Event venue overview" class="w-full h-full object-cover grayscale opacity-60 hover:opacity-100 transition-opacity duration-1000" data-alt="Wide shot of a beautifully lit, empty grand hall being prepared for an event, with soft golden lighting and minimal furniture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4daiUgsVmGi2cHuTgArOm1HvFow2yZmyHvCylh5jDZSRrT5cjUZQ4Pg3G06KjIdCSfrUI4SWTwMjd7vZVoLw1fuFnmQqVwveclXYGkj-mkGNl-_NIYDKLlXX_njtJ-9xWKF_jhLjDrcXG01S8kuJ8fBoQhkOnRh7D3IELLQR7QpHmqUazYPqwCqzMIj7Ihcem9CKlJLuQes0vGDDV4bOBFSph177j8H-MHdMGBLMq7WldQojD1TbW-sm961GqlqsRScqEKIbuyIlB"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-stone-950 dark:bg-black text-stone-100 dark:text-stone-200 border-t border-white/5">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-16 px-12 py-24 w-full max-w-[1920px] mx-auto">
+<div class="md:col-span-1">
+<div class="text-3xl font-serif tracking-widest text-stone-100 mb-8">L'Atelier</div>
+<p class="text-stone-500 text-sm leading-relaxed font-light tracking-wide">
+                    Curating elevated experiences for those who value the art of intentional living.
+                </p>
+</div>
+<div class="flex flex-col space-y-4">
+<h4 class="font-serif text-lg mb-4 text-stone-300">Navigation</h4>
+<a class="text-stone-500 hover:text-stone-100 transition-colors duration-500 Manrope tracking-widest text-[11px] uppercase" href="#">Services</a>
+<a class="text-stone-500 hover:text-stone-100 transition-colors duration-500 Manrope tracking-widest text-[11px] uppercase" href="#">Gallery</a>
+<a class="text-stone-500 hover:text-stone-100 transition-colors duration-500 Manrope tracking-widest text-[11px] uppercase" href="#">Inquiry</a>
+<a class="text-stone-500 hover:text-stone-100 transition-colors duration-500 Manrope tracking-widest text-[11px] uppercase" href="#">Privacy Policy</a>
+</div>
+<div class="flex flex-col space-y-4">
+<h4 class="font-serif text-lg mb-4 text-stone-300">Contact</h4>
+<span class="text-stone-500 Manrope tracking-widest text-[11px] uppercase">Paris / London / NYC</span>
+<span class="text-stone-500 Manrope tracking-widest text-[11px] uppercase">studio@latelier.com</span>
+<span class="text-stone-500 Manrope tracking-widest text-[11px] uppercase">+33 1 45 67 89 00</span>
+</div>
+<div class="flex flex-col">
+<h4 class="font-serif text-lg mb-4 text-stone-300">Journal</h4>
+<p class="text-stone-500 text-[11px] uppercase tracking-widest mb-6">Receive our seasonal editorial on curation.</p>
+<div class="flex border-b border-white/20 pb-2">
+<input class="bg-transparent border-none text-[11px] tracking-widest uppercase focus:ring-0 w-full p-0" placeholder="YOUR EMAIL" type="email"/>
+<button class="text-stone-100 hover:translate-x-1 transition-transform duration-300">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="px-12 py-12 border-t border-white/5 flex justify-between items-center max-w-[1920px] mx-auto">
+<span class="text-stone-500 Manrope tracking-widest text-[11px] uppercase">© 2024 L'Atelier. All rights reserved.</span>
+<div class="flex space-x-8">
+<a class="text-stone-500 hover:text-stone-100 hover:scale-105 transition-all duration-300" href="#"><span class="material-symbols-outlined text-sm">public</span></a>
+<a class="text-stone-500 hover:text-stone-100 hover:scale-105 transition-all duration-300" href="#"><span class="material-symbols-outlined text-sm">camera</span></a>
+<a class="text-stone-500 hover:text-stone-100 hover:scale-105 transition-all duration-300" href="#"><span class="material-symbols-outlined text-sm">share</span></a>
+</div>
+</div>
+</footer>
+</body></html>
