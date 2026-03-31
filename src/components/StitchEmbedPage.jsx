@@ -1,17 +1,21 @@
 import { useMemo } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import homeHtml from "../../home_cinematic_l_atelier/code.html?raw";
+import programsHtml from "../../services_overview_l_atelier/code.html?raw";
+import resultsHtml from "../../the_gallery_of_dreams_l_atelier/code.html?raw";
+import applyHtml from "../../event_inquiry_funnel_l_atelier/code.html?raw";
 
-const ROUTE_TO_FILE = {
-  "/": "/home_cinematic_l_atelier/code.html",
-  "/programs": "/services_overview_l_atelier/code.html",
-  "/results": "/the_gallery_of_dreams_l_atelier/code.html",
-  "/apply": "/event_inquiry_funnel_l_atelier/code.html"
+const ROUTE_TO_HTML = {
+  "/": homeHtml,
+  "/programs": programsHtml,
+  "/results": resultsHtml,
+  "/apply": applyHtml
 };
 
 export default function StitchEmbedPage() {
   const location = useLocation();
   const navigate = useNavigate();
-  const src = useMemo(() => ROUTE_TO_FILE[location.pathname] || ROUTE_TO_FILE["/"], [location.pathname]);
+  const html = useMemo(() => ROUTE_TO_HTML[location.pathname] || ROUTE_TO_HTML["/"], [location.pathname]);
 
   const onLoad = (event) => {
     const frame = event.currentTarget;
@@ -52,8 +56,9 @@ export default function StitchEmbedPage() {
   return (
     <main style={{ minHeight: "calc(100vh - 76px)" }}>
       <iframe
+        key={location.pathname}
         title={`stitch-page-${location.pathname}`}
-        src={src}
+        srcDoc={html}
         onLoad={onLoad}
         style={{ border: 0, width: "100%", minHeight: "calc(100vh - 76px)", background: "#fff" }}
       />
